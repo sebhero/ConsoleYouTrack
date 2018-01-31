@@ -21,7 +21,7 @@ namespace YTConsole
       Console.WriteLine($"Account {username}");
 
       IYouTrackClient yt = new YouTrackClient(ytURL, username, password);
-      var issues = yt.GetProjectRepository().GetProject("EDI").GetIssues("#Submitted #BUG -Resolved");
+      var issues = yt.GetProjectRepository().GetProject(project).GetIssues("#Submitted #BUG -Resolved");
 
       var www = new WebClient();
       //fix basic auth
