@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>YouTrack.Rest</id>
+    <version>1.2.0</version>
+    <authors>Sauli Tähkäpää</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Another .NET client for the YouTrack 5.x REST API</description>
+    <projectUrl>http://github.com/Saulis/YouTrack.Rest/</projectUrl>
+    <licenseUrl>https://github.com/Saulis/YouTrack.Rest/blob/master/LICENSE</licenseUrl>
+    <copyright>Copyright 2012-2015</copyright>
+	<tags>JetBrains YouTrack REST API</tags>
+	<dependencies>
+		<dependency id="RestSharp" version="105.0.1" />
+		<dependency id="Castle.Core" version="3.3.3" />
+	</dependencies>
+  </metadata>
+  <files>
+	<file src="bin\Release\YouTrack.Rest.dll" target="lib\net40" />
+	<file src="bin\Release\YouTrack.Rest.dll" target="lib\sl4" />
+	<file src="bin\Release\YouTrack.Rest.dll" target="lib\sl4-wp71" />
+  </files>
+</package>

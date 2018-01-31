@@ -1,0 +1,56 @@
+- Unreleased Changes
+* Nothing yet!
+
+- RELEASE v1.2.0 [2015-01-10]
+* [FEATURE] Updated Castle.Core to 3.3.3
+* [FEATURE] Updated RestSharp to 105.0.1
+* [FEATURE] Added visibility group argument to new comments (by edokan)
+* [FEATURE] Added visibility group argument to new issues
+* [FEATURE] Added visibility group argument to new file attachments
+* [FEATURE] Added visibility group argument to commands
+* [SIDE-NOTE] Not 100% compatible with YT 6.0 - problems mostly admin/user/group related due to changed API.
+
+- RELEASE v1.1.1 [2014-06-21]
+* [FEATURE] Updated Castle.Core to 3.3.0
+* [FEATURE] Updated RestSharp to 104.4.0
+* [BUGFIX] Fixed sending attachments to an issue for YouTrack 5.x.
+
+- RELEASE v1.0.5 [2014-05-31]
+* [FEATURE] Fetching Project Issues now supports indexing (by ssharunas)
+* [FEATURE] All Issues field values can now be accesssed (by ssharunas)
+
+- RELEASE v1.0.4 [2013-05-31]
+* [BUGFIX] Reverted back to using Castle.Core 3.2.0
+
+- RELEASE v1.0.3 [2013-05-02]
+* [FEATURE] Removed ILMerge, latest dependencies are now fetched from NuGet.
+
+- RELEASE v1.0.0 [2012-07-18]
+* [BUGFIX] Attaching a file using bytes added an extra file extension on the filename.
+* [FEATURE] Get project subsystems
+* [FEATURE] Add subsystem to project
+* [FEATURE] Get user roles
+* [FEATURE] Create user group
+* [FEATURE] Assign user role to user group
+* [FEATURE] Delete user group
+* [FEATURE] Get all user groups
+* [FEATURE] Get user group roles
+
+- RELEASE v0.5.0 [2012-07-11]
+* [FEATURE] Get user
+* [FEATURE] Create a new user
+* [FEATURE] Delete user
+* [FEATURE] Add user to group
+* [FEATURE] Get users groups
+* [FEATURE] Create a new project
+* [FEATURE] Get project
+* [FEATURE] Delete project
+
+- RELEASE v0.4.0 [2012-06-30]
+* [BREAKING] ILMerge added to merge RestSharp and Castle.Core
+* [BREAKING] Castle DynamicProxy added, IIssueProxy no longer used
+* [FEATURE] Apply command(s) to an issue
+* [FEATURE] Get issues in a project
+* [FEATURE] Remove a comment for an issue
+
+* [BUGFIX] Getting an issue with empty description throws exceptions (fixed by akoeplinger, https://github.com/akoeplinger/YouTrack.Rest/commit/8d22482067235584e958115a19696642873bbc78)

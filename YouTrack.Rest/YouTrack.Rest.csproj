@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF17421E-5AF6-4855-9CB7-73D075CCC9F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YouTrack.Rest</RootNamespace>
+    <AssemblyName>YouTrack.Rest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Deserialization\Comment.cs" />
+    <Compile Include="Deserialization\CommentCollection.cs" />
+    <Compile Include="Deserialization\Field.cs" />
+    <Compile Include="Deserialization\FileUrl.cs" />
+    <Compile Include="Deserialization\FileUrlCollection.cs" />
+    <Compile Include="Deserialization\Issue.cs" />
+    <Compile Include="Deserialization\Project.cs" />
+    <Compile Include="Deserialization\Subsystem.cs" />
+    <Compile Include="Deserialization\SubsystemCollection.cs" />
+    <Compile Include="Deserialization\User.cs" />
+    <Compile Include="Deserialization\UserGroup.cs" />
+    <Compile Include="Deserialization\UserGroupCollection.cs" />
+    <Compile Include="Deserialization\UserRole.cs" />
+    <Compile Include="Deserialization\UserRoleCollection.cs" />
+    <Compile Include="Deserialization\Value_.cs" />
+    <Compile Include="Exceptions\InterceptionTypeNotLoadableException.cs" />
+    <Compile Include="Exceptions\IssueNotCreatedException.cs" />
+    <Compile Include="Exceptions\IssueDeserializationException.cs" />
+    <Compile Include="Exceptions\LocationHeaderCountInvalidException.cs" />
+    <Compile Include="Exceptions\ParameterAlreadyAddedException.cs" />
+    <Compile Include="Exceptions\RequestFailedException.cs" />
+    <Compile Include="Exceptions\RequestNotFoundException.cs" />
+    <Compile Include="Exceptions\UnexpectedMultipleFieldValuesException.cs" />
+    <Compile Include="Factories\IIssueFactory.cs" />
+    <Compile Include="Factories\IProjectFactory.cs" />
+    <Compile Include="Factories\IssueFactory.cs" />
+    <Compile Include="Factories\ProjectFactory.cs" />
+    <Compile Include="Factories\ProxyFactory.cs" />
+    <Compile Include="Factories\RestFileRequestFactory.cs" />
+    <Compile Include="Factories\RestRequestFactory.cs" />
+    <Compile Include="IAttachment.cs" />
+    <Compile Include="IComment.cs" />
+    <Compile Include="IConnection.cs" />
+    <Compile Include="IIssueActions.cs" />
+    <Compile Include="Interception\ILoadable.cs" />
+    <Compile Include="Interception\LoadableProxyInterceptor.cs" />
+    <Compile Include="Interception\PropertyGetterProxyGenerationHook.cs" />
+    <Compile Include="IProject.cs" />
+    <Compile Include="IProjectActions.cs" />
+    <Compile Include="ISession.cs" />
+    <Compile Include="IIssue.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="IssueActions.cs" />
+    <Compile Include="ISubsystem.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IUserActions.cs" />
+    <Compile Include="IUserGroup.cs" />
+    <Compile Include="IUserRole.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectActions.cs" />
+    <Compile Include="Repositories\IIssueRepository.cs" />
+    <Compile Include="Repositories\IProjectRepository.cs" />
+    <Compile Include="Repositories\IssueRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\ProjectRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Requests\Issues\AddCommentToIssueRequest.cs" />
+    <Compile Include="Requests\Issues\ApplyCommandsToAnIssueRequest.cs" />
+    <Compile Include="Requests\Issues\ApplyCommandToAnIssueRequest.cs" />
+    <Compile Include="Requests\Issues\AttachFileToAnIssueRequest.cs" />
+    <Compile Include="Requests\Issues\CheckIfIssueExistsRequest.cs" />
+    <Compile Include="Requests\Issues\CreateNewIssueRequest.cs" />
+    <Compile Include="Requests\Issues\DeleteIssueRequest.cs" />
+    <Compile Include="Requests\Issues\GetAttachmentsOfAnIssueRequest.cs" />
+    <Compile Include="Requests\Issues\GetCommentsOfAnIssueRequest.cs" />
+    <Compile Include="Requests\Issues\GetIssueRequest.cs" />
+    <Compile Include="Requests\Issues\GetIssuesInAProjectRequest.cs" />
+    <Compile Include="Requests\Issues\RemoveACommentForAnIssueRequest.cs" />
+    <Compile Include="Requests\IYouTrackDeleteRequest.cs" />
+    <Compile Include="Requests\IYouTrackGetRequest.cs" />
+    <Compile Include="Requests\IYouTrackPostRequest.cs" />
+    <Compile Include="Requests\IYouTrackFileRequest.cs" />
+    <Compile Include="Requests\IYouTrackPostWithFileRequest.cs" />
+    <Compile Include="Requests\IYouTrackPutRequest.cs" />
+    <Compile Include="Requests\LoginRequest.cs" />
+    <Compile Include="Requests\Projects\AddSubsystemToProjectRequest.cs" />
+    <Compile Include="Requests\Projects\CreateNewProjectRequest.cs" />
+    <Compile Include="Requests\Projects\DeleteProjectRequest.cs" />
+    <Compile Include="Requests\Projects\GetProjectRequest.cs" />
+    <Compile Include="Requests\Projects\GetProjectSubsystemsRequest.cs" />
+    <Compile Include="Requests\RestRequestResourceBuilder.cs" />
+    <Compile Include="Requests\Users\AddUserToGroupRequest.cs" />
+    <Compile Include="Requests\Users\AssignRoleToUserGroupRequest.cs" />
+    <Compile Include="Requests\Users\CreateANewUserRequest.cs" />
+    <Compile Include="Requests\Users\CreateUserGroupRequest.cs" />
+    <Compile Include="Requests\Users\DeleteUserGroupRequest.cs" />
+    <Compile Include="Requests\Users\DeleteUserRequest.cs" />
+    <Compile Include="Requests\Users\GetAllUserGroupsRequest.cs" />
+    <Compile Include="Requests\Users\GetUserGroupRolesRequest.cs" />
+    <Compile Include="Requests\Users\GetUserRequest.cs" />
+    <Compile Include="Requests\Users\GetUserRolesRequest.cs" />
+    <Compile Include="Requests\Users\GetUsersGroupsRequest.cs" />
+    <Compile Include="Requests\YouTrackRequest.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserActions.cs" />
+    <Compile Include="UserGroup.cs" />
+    <Compile Include="YouTrackClient.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="IYouTrackClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\IYouTrackRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="YouTrack.Rest.csproj.nuspec" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
